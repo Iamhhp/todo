@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+  user-select: none;
+}
+
+div.container {
+  display: flex;
+  width: 450px;
+  height: fit-content;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 1px solid orangered;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 3px orangered;
+
+  overflow-y: hidden;
+  background-color: orange;
+}
+
+div.container p.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+
+  margin: 10px 0px;
+
+  text-shadow: 3px 1px 5px orangered;
+}
+
+div.container div.input {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container div.input input {
+  display: inline-block;
+  width: 300px;
+  height: 35px;
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+
+  padding: 5px;
+
+  border: 2px solid orangered;
+  border-radius: 5px 0px 0px 5px;
+  outline: none;
+}
+
+div.container div.input button {
+  display: inline-block;
+  width: fit-content;
+  height: 35px;
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+
+  margin-left: 1px;
+  padding: 0px 5px;
+
+  cursor: pointer;
+
+  border: 2px solid orangered;
+  border-radius: 0px 5px 5px 0px;
+  outline: none;
+}
+
+div.container div.input button:active {
+  box-shadow: inset 0px 0px 1px 1px orangered;
+  /* background-color: red; */
+}
+
+div.container div.listTODO {
+  width: 100%;
+  height: fit-content;
+
+  max-height: 350px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+div.container div.listTODO div.itemTODO {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+
+  padding: 5px 10px;
+  border-top: 1px dashed orangered;
+
+  background-color: darkred;
+}
+
+div.container div.listTODO div.itemTODO:hover {
+  background-color: green;
+}
+
+div.container div.listTODO div.itemTODO-Done {
+  background-color: green;
+}
+
+div.container div.listTODO div.itemTODO-Done p.titleTODO {
+  text-decoration: line-through;
+}
+
+div.container div.listTODO div.itemTODO-Done p.titleTODO::before {
+  content: '';
+  display: inline-block;
+  width: 23px;
+  height: 7px;
+
+  transform: rotate(-45deg);
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+
+  margin-right: 5px;
+  margin-bottom: 8px;
+}
+
+div.container div.listTODO div.itemTODO i {
+  display: none;
+  cursor: pointer;
+}
+
+div.container div.listTODO div.itemTODO:hover i {
+  display: inline-block;
+}
+
+div.container div.listTODO div.itemTODO i:hover {
+  color: red;
+}
